@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Example Bootic app</title>
+  <link rel='stylesheet' href='/master.css' type='text/css' media="screen, projection">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="header clearfix">
+      <h2 class="logo">Logo Here</h2>
+      <form action="/<%= params[:shop_subdomain] %>" method="get">
+        <input type="search" name="q" value="<%= params[:q] %>" />
+        <button type="submit">search</button>
+      </form>
+    </div><!-- /header -->
+
+    <div class="primary">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

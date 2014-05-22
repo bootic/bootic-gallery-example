@@ -1,0 +1,10 @@
+<p><%= @products.total_items %> productos en total</p>
+<ul class="list clearfix">
+  <% @products.items.each do |product| %>
+    <li class="product">
+      <img src="<%= product.image.links['small'].href %>" />
+      <h4><%= product.title %></h4>
+      <p class="price">$<%= product.price %></p>
+    </li>
+  <% end %>
+</ul>
