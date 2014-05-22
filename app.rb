@@ -23,7 +23,19 @@ class App < Sinatra::Base
     @client ||= BooticAPI.new.get
   end
 
+  get '/?' do
+    @path = '/'
+    @products = client.products.where(
+      per_page: 28,
+      sort: 'updated_on.desc', 
+      q: params[:q]
+    ).get
+
+    erb :index
+  end
+
   get '/:shop_subdomain' do |subdomain|
+    @path = "/#{subdomain}"
     @products = client.products.where(
       shop_subdomains: subdomain, 
       per_page: 28,
