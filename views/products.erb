@@ -1,0 +1,16 @@
+<p><%= @products.total_items %> productos en total</p>
+<ul class="list clearfix">
+  <% @products.items.each do |product| %>
+    <li class="product">
+      <a class="clip" href="<%= product.links['btc:web'].href %>">
+        <% if product.image %>
+          <img src="<%= product.image.links['small'].href %>" />
+        <% else %>
+          <img src="http://placehold.it/300x200" />
+        <% end %>
+      </a>
+      <h4><%= product.title %></h4>
+      <p class="price">$<%= product.price %></p>
+    </li>
+  <% end %>
+</ul>

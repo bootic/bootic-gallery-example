@@ -31,7 +31,17 @@ class App < Sinatra::Base
       q: params[:q]
     ).get
 
-    erb :index
+    erb :products
+  end
+
+  get '/shops' do
+    @path = "/shops"
+    @shops = client.shops.where(
+      status: 'active,free',
+      sort: 'updated_on.desc',
+      q: params[:q]
+    ).get
+    erb :shops
   end
 
   get '/:shop_subdomain' do |subdomain|
@@ -43,6 +53,7 @@ class App < Sinatra::Base
       q: params[:q]
     ).get
 
-    erb :index
+    erb :products
   end
+
 end

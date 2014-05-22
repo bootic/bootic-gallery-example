@@ -9,7 +9,11 @@
   <div id="wrapper">
     <div class="header clearfix">
       <h2 class="logo">Logo Here</h2>
-      <form action="<%= @path %>" method="get">
+      <nav>
+        <a href="/">Productos</a> | 
+        <a href="/shops">Tiendas</a>
+      </nav>
+      <form action="<%= @path %>" method="get" class="search">
         <input type="search" name="q" value="<%= params[:q] %>" />
         <button type="submit">search</button>
       </form>

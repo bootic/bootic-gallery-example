@@ -7,6 +7,17 @@ body {
   margin: 0 auto;
   width: 1000px;
 }
+.logo {
+  float: left;
+}
+nav {
+  float: left;
+  margin: 26px 0 0 40px;
+}
+.search {
+  float: right;
+  margin-top: 20px;
+}
 .list {
   margin: 0;
   padding: 0;
@@ -29,6 +40,30 @@ body {
   width: 100%;
 }
 
+
+.shop {
+  float: left;
+  margin: 0 1rem 2rem 0;
+  width: 315px;
+}
+.shop .clip {
+  display: block;
+  height: 200px;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+  overflow: hidden;
+  border: solid #eee 1px;
+}
+
+.shop .clip img {
+  width: 100%;
+}
+.shop h4 {
+  margin-bottom: .5rem;
+}
+.shop .products_count {
+  margin-top: 0;
+}
+
 .clearfix:after {
     content: ".";
     display: block;
@@ -36,10 +71,6 @@ body {
     visibility: hidden;
     line-height: 0;
     height: 0;
-}
- 
-.clearfix {
-    display: inline-block;
 }
  
 html[xmlns] .clearfix {
