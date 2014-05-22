@@ -2,7 +2,7 @@
 <ul class="list clearfix">
   <% @products.items.each do |product| %>
     <li class="product">
-      <img src="<%= product.image.links['small'].href %>" />
+      <span class="clip"><img src="<%= product.image.links['small'].href %>" /></span>
       <h4><%= product.title %></h4>
       <p class="price">$<%= product.price %></p>
     </li>
