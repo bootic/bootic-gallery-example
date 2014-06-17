@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'sinatra'
-gem 'hyperresource'
+gem 'bootic_client'
 gem 'rack-cache'
+gem 'dalli'
 gem 'puma'

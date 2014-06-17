@@ -9,7 +9,9 @@ Example Sinatra app to showcase Bootic API usage
 
 ## Setup local environment
 
-    $ echo "BOOTIC_ACCESS_TOKEN=xxxxx" > .env
+Copy and change local enviroment configuration.
+
+    $ cp .env.example .env
 
 ## Run
 

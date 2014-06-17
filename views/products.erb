@@ -1,15 +1,15 @@
-<p><%= @products.total_items %> productos en total</p>
+<p><%= @products.total_items %> total products</p>
 <ul class="list clearfix">
-  <% @products.items.each do |product| %>
+  <% @products.each do |product| %>
     <li class="product">
-      <a class="clip" href="<%= product.links['btc:web'].href %>">
-        <% if product.image %>
-          <img src="<%= product.image.links['small'].href %>" />
+      <a class="clip" href="<%= product.rels[:web].href %>">
+        <% if product.has?(:image) %>
+          <img src="<%= product.image.rels[:small].href %>" />
         <% else %>
           <img src="http://placehold.it/300x200" />
         <% end %>
       </a>
-      <h4><%= product.title %></h4>
+      <h4>[<%= product.status %>] <%= product.title %></h4>
       <p class="price">$<%= product.price %></p>
     </li>
   <% end %>
